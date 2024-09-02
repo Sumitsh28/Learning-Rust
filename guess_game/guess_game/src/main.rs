@@ -17,6 +17,7 @@ fn main() {
         .expect("Failed to get number!"); //we are handling error by using expect
 
     let guess: u32 = guess.trim().parse().expect("Failed to parse"); //shadowing (Redeclaration of guess) we are changing type using parse
+    //shadowing m type bhi change hoskti hai 
 
     // let guess: u32 = match guess.trim().parse() {
     //     Ok(num) => num,
