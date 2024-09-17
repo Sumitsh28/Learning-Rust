@@ -1,0 +1,47 @@
+struct Info {
+    firstName: String,
+    secondName:  String, // we are using String instead of &str beacuse we want the struct to have ownership of this
+    age: u64,
+}
+
+// tuple as struct
+
+struct Color(u64,u64,u64);
+
+//unit like struct
+
+struct  Unit;
+
+fn buildInfo(firstName:String) -> Info {
+
+    Info{
+        firstName,
+        secondName:  String::from("Shandillya"),
+        age: 21,
+    }
+}
+
+fn main() {
+
+    let mut info1 : Info = Info {
+        firstName: String::from("Sumit"),
+        secondName: String::from("Shandillya"),
+        age: 21,
+    };
+
+    info1.age = 22;
+
+    let info2: Info = buildInfo(String::from("Alka"));
+
+    let info3 : Info = Info{
+
+        firstName: String::from("Shrey"),
+        ..info1
+    };
+
+    let black = Color(0,0,0);
+
+    let unitStruct = Unit;
+
+    println!("My name is {} {}, my age is {}",info3.firstName,info3.secondName, info3.age);
+}
