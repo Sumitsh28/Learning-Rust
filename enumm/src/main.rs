@@ -1,4 +1,4 @@
-// #[derive(Debug)]
+#[derive(Debug)]
 // enum Nation {
 //     State,
 //     City,
@@ -58,10 +58,56 @@
 
 // cant add option and i8
 // As such, Rust does not have nulls, but it does have an enum that can encode the concept of a value being present or absent. This enum is Option<T>
-fn main() {
-    let x: i8 = 5;
-    let y: Option<i8> = Some(5);
+// fn main() {
+//     let x: i8 = 5;
+//     let y: Option<i8> = Some(5);
 
-    // let sum = x + y; this wont run 
-    let sum = x + y.unwrap();  // this will run
+//     // let sum = x + y; this wont run 
+//     let sum = x + y.unwrap();  // this will run
+// }
+
+// Match type
+
+enum IndStates{
+
+    DEL,
+    UP,
+    HR,
+}
+
+fn capitals(state:  IndStates) ->  String {
+
+    match state {
+        IndStates::DEL => {
+            println!("BC");
+            "Delhi".to_string()
+            
+        }
+        IndStates::UP => "Uttar Pradesh".to_string(),
+        IndStates::HR => "Haryana".to_string(),
+    }
+}
+
+//patterns must cover all possibilities
+
+
+
+fn main(){
+
+    // let state  = IndStates::DEL;
+
+    // capitals(state);
+
+    // println!("{:?}",state);
+
+    // catch  all pattern and _ placeholder
+
+    let num:i32 = 4;
+
+    match num {
+        2 => println!("2 it is!"),
+        3 => println!("3 it is!"),
+        _ => println!("{} it is",num), // instead of _ we can also use 'other'
+    }
+
 }
