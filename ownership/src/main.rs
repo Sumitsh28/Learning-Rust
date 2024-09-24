@@ -3,26 +3,26 @@
 
 // fn main() {
 
-    // shallow copy
+    shallow copy
 
-    // let name : String = String::from("Sumit");
-    // let name2 = name;
+    let name : String = String::from("Sumit");
+    let name2 = name;
 
-    // println!("Name {name2}"); // will work
-    // println!("Name {name}"); // will not work
+    println!("Name {name2}"); // will work
+    println!("Name {name}"); // will not work
 
-    // very expensive operation, causes double free error
+    very expensive operation, causes double free error
 
 
-    // deep copy
+    deep copy
 
-    // let name : String = String::from("Sumit");
-    // let name2 = name.clone();
+    let name : String = String::from("Sumit");
+    let name2 = name.clone();
     
-    // println!("Name {name2}"); // will work
-    // println!("Name {name}"); // will work
+    println!("Name {name2}"); // will work
+    println!("Name {name}"); // will work
 
-    // very expensive operation, doesn't causes double free error
+    very expensive operation, doesn't causes double free error
 
    
    

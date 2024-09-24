@@ -4,13 +4,13 @@
 //     age: u64,
 // }
 
-// tuple as struct
+tuple as struct
 
-// struct Color(u64,u64,u64);
+struct Color(u64,u64,u64);
 
-//unit like struct
+unit like struct
 
-// struct  Unit;
+struct  Unit;
 
 // fn buildInfo(firstName:String) -> Info {
 
